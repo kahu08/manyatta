@@ -13,16 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery
-//= require jquery_ujs
-//= require ./environment
-//= require ember
-//= require ember-data
-//= require active-model-adapter
-
-//= require_self
-//= require ./manyatta
-
-// for more details see: http://emberjs.com/guides/application/
-Manyatta = Ember.Application.create();
 //= require_tree .
