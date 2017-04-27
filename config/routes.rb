@@ -3,5 +3,11 @@ Rails.application.routes.draw do
   resources :bookings
   resources :reviews
   resources :houses
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'landing/index'
+
+  root to: 'landing#index'
+
+# make the index of houses into /discover
+  get 'houses/discover', to: 'houses#discover', as: 'discover'
 end
