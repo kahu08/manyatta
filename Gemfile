@@ -49,10 +49,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'active_model_serializers', '~> 0.10.5'
-gem 'ember-data-source', '~> 2.12', '>= 2.12.2'
-gem 'ember-source', '~> 2.12', '>= 2.12.1'
-gem 'ember-rails', '~> 0.21.0'
+
 gem 'devise', '~> 4.2', '>= 4.2.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
