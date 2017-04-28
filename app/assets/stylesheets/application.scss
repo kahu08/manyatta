@@ -1,6 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "landing.scss";
+
+// body
+body{
+  overflow-x: hidden;
+}
+
+// navbar
+.navbar{
+  margin-bottom: 0px;
+}
 /**user login and sign-up styles**/
 .stuff{
   background-color: rgb(227, 225, 25);
@@ -74,3 +84,4 @@
     background-color:#34CACA;
 }
 /**end of profile and user styling**/ 
+
