@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   root to: 'landing#index'
 
 # make the index of houses into /discover
-  get 'houses/discover', to: 'houses#discover', as: 'discover'
 end

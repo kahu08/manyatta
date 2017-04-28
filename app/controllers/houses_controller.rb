@@ -53,6 +53,6 @@ class HousesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def house_params
-      params.fetch(:house, {})
+      params.fetch(:house).permit(:name, :description, :telephone, :street, :rules, :ammenities, :price)
     end
 end

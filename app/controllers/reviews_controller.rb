@@ -53,6 +53,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def review_params
-      params.fetch(:review, {})
+      params.fetch(:review).permit(:comment)
     end
 end
