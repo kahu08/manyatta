@@ -9,10 +9,16 @@
     </head>
 
     <body>
-        <%=link_to "discover", houses_path%>
+        <div class="row">
+          <%= render("/layouts/navbar")%>
+        </div>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-
-        <%= yield %>
+        <div class="row">
+          <%= yield %>
+        </div>
+        <div class="row">
+          <%= render("/layouts/footer")%>
+        </div>
     </body>
 </html>
