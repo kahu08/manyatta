@@ -53,6 +53,6 @@ class BookingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def booking_params
-      params.fetch(:booking, {})
+      params.fetch(:booking).permit(:checkin, :checkout, :occupancy)
     end
 end
