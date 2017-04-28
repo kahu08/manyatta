@@ -1,3 +1,75 @@
-// Place all the styles related to the landing controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header{
+  background:
+  linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url(asset-path("marakesh.jpg"))no-repeat center center;
+  text-align: center;
+}
+.header-text{
+  padding-top: 15%;
+  font-size: 60px;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.header-form form input{
+  margin-top: 5%;
+  width: 60%;
+  margin-left: 20%;
+ height: 50px;
+ background: rgba(255, 255, 255, 0.8);
+ font-size: 28px;
+ color: #FFBC0A;
+ font-weight: bolder;
+ margin-bottom: 3%;
+}
+.header-form form button{
+  margin-bottom: 10%;
+  width: 14%;
+  padding: 1%;
+  background: #33658A;
+  color: white;
+  border: 1px solid #33658A;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.how-to-use{
+   text-align: center;
+}
+.how-to-use h2{
+
+ border-bottom: 1px solid #33658A;
+ padding: 2%;
+ color: #33658A;
+ font-size: 43px;
+ font-weight: bold;
+ text-transform: capitalize;
+}
+.how-to-use img{
+  width: 150px;
+  height:150px;
+  margin: 8%;
+}
+.how-to-use h5{
+  padding: 3%;
+  font-size: 30px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: #33658A;
+}
+.video-embed{
+ text-align: center;
+ background-color: #FFBC0A;
+ margin-top: 3%;
+}
+.video-embed iframe{
+ padding: 4%;
+}
+.video-embed h3 {
+ margin-top: 25%;
+ text-transform: capitalize;
+ font-weight: bolder;
+ font-size: 35px;
+ color: #33658A;
+}
