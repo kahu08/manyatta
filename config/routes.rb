@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'profile/index'
+
+  get 'profile/edit'
+
   devise_for :users
   resources :bookings
   resources :reviews
