@@ -1,3 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "landing.scss";
+
+// body
+body{
+  overflow-x: hidden;
+}
+
+// navbar
+.navbar{
+  margin-bottom: 0px;
+}
