@@ -30,6 +30,10 @@
                   <li>
                    <%=link_to "profile", profile_index_path%>
                   </li>
+                  <!-- create a house-->
+                  <li>
+                   <%=link_to "list Home",  new_house_path%>
+                  </li>
                   <!-- sign out -->
                   <li>
                     <%=link_to "sign out", destroy_user_session_path, method: :delete%>
