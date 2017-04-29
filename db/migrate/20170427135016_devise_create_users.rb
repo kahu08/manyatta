@@ -6,6 +6,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
       # username
       t.string :name
+
+      # username phone-number
+      t.integer :telephone, :limit => 8
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
