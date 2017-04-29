@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   before_action :set_house, only: [:show, :edit, :update, :destroy]
-
+  before_filter :must_login?, only: [:new, :edit, :destroy]
   # GET /houses
   def index
     @houses = House.all
@@ -12,7 +12,7 @@ class HousesController < ApplicationController
 
   # GET /houses/new
   def new
-    @house = House.new
+    @house = current_user.houses.new
   end
 
   # GET /houses/1/edit
@@ -21,7 +21,7 @@ class HousesController < ApplicationController
 
   # POST /houses
   def create
-    @house = House.new(house_params)
+    @house = current_user.houses.new(house_params)
 
     if @house.save
       redirect_to @house, notice: 'House was successfully created.'
