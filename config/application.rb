@@ -16,6 +16,11 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+GOOGLE_CLIENT_ID = ENV['GOOGLE_CLIENT_ID']
+GOOGLE_CLIENT_SECRET = ENV['GOOGLE_CLIENT_SECRET']
+
 module Manyatta
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
