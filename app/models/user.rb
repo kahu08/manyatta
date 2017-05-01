@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, omniauth_providers: [:google_oauth2]
+         :omniauthable, omniauth_providers: [:google_oauth2, :facebook_oauth],
   has_many :houses, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :bookings, dependent: :destroy
@@ -14,6 +14,7 @@ class User < ApplicationRecord
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
         user.uid = auth.uid
+        user.name = auth.info.name
         user.email = auth.info.email
         user.password = Devise.friendly_token[0,20]
       end
