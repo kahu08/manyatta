@@ -15,6 +15,13 @@ require "sprockets/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+# helps load variables faster
+Dotenv::Railtie.load
+# specify all required env variables
+GOOGLE_CLIENT_ID = ENV['GOOGLE_CLIENT_ID']
+GOOGLE_CLIENT_SECRET = ENV['GOOGLE_CLIENT_SECRET']
+FACEBOOK_CLIENT_ID = ENV['FACEBOOK_CLIENT_ID']
+FACEBOOK_CLIENT_SECRET = ENV['FACEBOOK_CLIENT_SECRET']
 
 module Manyatta
   class Application < Rails::Application
