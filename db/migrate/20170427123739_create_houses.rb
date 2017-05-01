@@ -9,6 +9,7 @@ class CreateHouses < ActiveRecord::Migration[5.0]
       t.text :ammenities
       t.integer :price
       t.integer :user_id
+      t.integer :region_id
 
       t.timestamps
     end

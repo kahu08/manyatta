@@ -25,15 +25,9 @@
             <p>...</p>
         </div>
         <!-- show the house tab if the current user owns any houses -->
-        <%if current_user.houses.any?%>
+        <%=render 'houses'%>
 
-        <div class="tab-pane" role="tabpanel" id="houses">
-            <p>...</p>
-        </div>
-        <%end%>
-        <div class="tab-pane" role="tabpanel" id="settings">
-            <p>...</p>
-        </div>
+        <%=render 'settings'%>
 
     </div>
 </div>
