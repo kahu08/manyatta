@@ -1,6 +1,7 @@
 class CallbacksController < Devise::OmniauthCallbacksController
+  # You need to implement the methods below in your model (e.g. app/models/user.rb)
+  ##  setting a callback for google
   def google_oauth2
-      # You need to implement the method below in your model (e.g. app/models/user.rb)
       @user = User.from_omniauth(request.env["omniauth.auth"])
 
       if @user.persisted?
@@ -12,8 +13,8 @@ class CallbacksController < Devise::OmniauthCallbacksController
       end
   end
 
+  ## setting a callback for facebook
   def facebook
-    # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
     if @user.persisted?
