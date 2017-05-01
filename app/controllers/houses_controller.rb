@@ -12,6 +12,7 @@ class HousesController < ApplicationController
 
   # GET /houses/new
   def new
+    @region = Region.all
     @house = current_user.houses.new
   end
 
