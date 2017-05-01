@@ -21,10 +21,18 @@ class HousesController < ApplicationController
 
   # POST /houses
   def create
+    # get region_id from house table
+    @region = Region.find(params[:region_id])
+    @house = @region.houses.new(house_params)
+    @house.user = current_user
+    # scaffolded
     @house = current_user.houses.new(house_params)
 
     if @house.save
+      # scaffolded
       redirect_to @house, notice: 'House was successfully created.'
+      # redirect_to discover
+      # redirect_to
     else
       render :new
     end
@@ -41,6 +49,8 @@ class HousesController < ApplicationController
 
   # DELETE /houses/1
   def destroy
+    @region = Region.find(params[:region_id])
+    @house = @region.houses.find(params[:id])
     @house.destroy
     redirect_to houses_url, notice: 'House was successfully destroyed.'
   end
