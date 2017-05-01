@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   get 'profile/edit'
 
-  devise_for :users
+# point controller for omniauth to devise
+  devise_for :users, controllers: { :omniauth_callbacks => "callbacks"}
   resources :bookings
   resources :reviews
   resources :houses
