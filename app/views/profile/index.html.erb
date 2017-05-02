@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+<div class="">
+    <div class="profile-picture">
+        <%= image_tag("go.png", alt:"profile picture")%>
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation">
+            <a href="#bookings" aria-controls="bookings" role="tab" data-toggle="tab">Bookings</a>
+        </li>
+        <!-- show the house tab if the current user owns any houses -->
+
+        <%if current_user.houses.any?%>
+        
+        <li role="presentation">
+            <a href="#houses" aria-controls="houses" role="tab" data-toggle="tab">Houses</a>
+        </li>
+        <%end%>
+        <li role="presentation" class="active">
+            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Account settings</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes code -->
+    <div class="tab-content">
+        <div class="tab-pane active" role="tabpanel" id="bookings">
+            <p>...</p>
+        </div>
+        <!-- show the house tab if the current user owns any houses -->
+        <%=render 'houses'%>
+=======
 <div class="profile">
   <%= image_tag current_user.avatar.url(:medium) %>
 </div>
@@ -8,6 +39,7 @@
       <a href="#bookings" aria-controls="bookings" role="tab" data-toggle="tab">Bookings</a>
     </li>
     <!-- show the house tab if the current user owns any houses -->
+>>>>>>> 7072ac0db670c1e1602dd2c91fe8f24026a1d773
 
     <%if current_user.houses.any?%>
     <li role="presentation">
