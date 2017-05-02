@@ -120,15 +120,16 @@ body{
    text-decoration: none;
 }
 .social-icons{
-  width: 30px;
-  height: 30px;
    text-align: right;
    list-style: none;
    float:right;
   
 }
-.social-icons li{
-   display: inline;
+.social-icons ul li{
+  width: 30px;
+  height: 30px;
+  padding-top: 30px;
+   display: inline-block;
 }
 
 /*****************End of footer styling**************/
