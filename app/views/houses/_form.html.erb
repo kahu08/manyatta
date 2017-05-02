@@ -12,11 +12,6 @@
 </div>
 <% end %>
 
-<div class="field">
-  <label for="house_region">Regions</label>:
-  <!-- Region is a table with one column called 'name' and an auto-assigned column id; :region_id is the name of the element and 0 is the default selected index when the page loads. -->
-  <%= collection_select(:region_id, 0, Region.all, :id, :name) %>
-</div>
 
 <div class="field">
   <%= f.label :name %>
@@ -31,6 +26,11 @@
 <div class="field">
   <%= f.label :telephone %>
   <%= f.number_field :telephone %>
+</div>
+
+<div class="field">
+  <%= f.label :location %>
+  <%= f.text_field :location %>
 </div>
 
 <div class="field">

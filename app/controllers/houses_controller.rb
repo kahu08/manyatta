@@ -12,8 +12,7 @@ class HousesController < ApplicationController
 
   # GET /houses/new
   def new
-    @region = Region.all
-    @house = current_user.houses.new
+    @house= current_user.houses.new
   end
 
   # GET /houses/1/edit
@@ -22,10 +21,6 @@ class HousesController < ApplicationController
 
   # POST /houses
   def create
-    # get region_id from house table
-    @region = Region.find(params[:region_id])
-    @house = @region.houses.new(house_params)
-    @house.user = current_user
     # scaffolded
     @house = current_user.houses.new(house_params)
 
@@ -50,8 +45,6 @@ class HousesController < ApplicationController
 
   # DELETE /houses/1
   def destroy
-    @region = Region.find(params[:region_id])
-    @house = @region.houses.find(params[:id])
     @house.destroy
     redirect_to houses_url, notice: 'House was successfully destroyed.'
   end
@@ -64,6 +57,6 @@ class HousesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def house_params
-      params.fetch(:house).permit(:name, :description, :telephone, :street, :rules, :ammenities, :price)
+      params.fetch(:house).permit(:name, :description, :telephone, :location, :street, :rules, :ammenities, :price)
     end
 end

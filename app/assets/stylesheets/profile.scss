@@ -1,19 +1,51 @@
 // Place all the styles related to the profile controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.profile-picture {
-  width: 210px;
-  height: 210px;
-  margin: 25px auto;
-  overflow: hidden;
-  border-radius: 50%;
-  position: relative;
+// .profile-picture {
+//   width: 210px;
+//   height: 210px;
+//   margin: 25px auto;
+//   overflow: hidden;
+//   border-radius: 50%;
+//   position: relative;
+// }
+//
+// .profile-picture img {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%,-50%);
+// }
+
+.profile{
+ text-align: center;
+ margin-top: 5%;
+ margin-bottom: 5%;
+
+}
+.profile img{
+ border:3px solid #FF690F ;
 }
 
-.profile-picture img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+.profile h4{
+ font-size: 23px;
+ font-weight: 400;
+ font-family: Roboto;
+
 }
-/*********************************************************/
+.nav-tabs{
+ background: #FF690F ;
+ border: none;
+
+}
+.nav-tabs li a{
+ border: 1px solid white;
+   color: white;
+   font-size: 18px;
+   font-weight: bold;
+   font-family: Roboto;
+
+}
+.nav-tabs li a:hover{
+   background: #FF690F ;
+}/*********************************************************/
