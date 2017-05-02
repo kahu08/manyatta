@@ -2,7 +2,7 @@
   <%= image_tag current_user.avatar.url(:medium) %>
 </div>
 <!-- Nav tabs -->
-<div class="row">
+<div class="row container-fluid">
   <ul class="nav nav-tabs nav-justified" role="tablist">
     <li role="presentation">
       <a href="#bookings" aria-controls="bookings" role="tab" data-toggle="tab">Bookings</a>
@@ -22,7 +22,7 @@
   <!-- Tab panes code -->
   <div class="tab-content">
     <div class="tab-pane fade in active" role="tabpanel" id="bookings">
-      <p>...</p>
+      <p>.........................</p>
     </div>
     <!-- show the house tab if the current user owns any houses -->
     <%= render("profile/houses")%>
