@@ -1,5 +1,4 @@
 <!-- show the house tab if the current user owns any houses -->
-<div class="tab-pane fade" role="tabpanel" id="houses">
   <%current_user.houses.each do |house|%>
   <p>
     <strong>Name:</strong>
@@ -14,4 +13,3 @@
     <%=house.price%>
   </p>
   <%end%>
-</div>

@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:new, :create, :edit, :update, :destroy]
-
+  before_filter :must_login?, only: [:new, :edit, :destroy]
   # GET /bookings
   def index
     @bookings = Booking.all
