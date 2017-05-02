@@ -4,12 +4,12 @@ class CreateHouses < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       t.integer :telephone
+      t.text :location
       t.string :street
       t.text :rules
       t.text :ammenities
       t.integer :price
       t.integer :user_id
-      t.integer :region_id
 
       t.timestamps
     end
