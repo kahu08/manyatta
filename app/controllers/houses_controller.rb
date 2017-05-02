@@ -8,6 +8,7 @@ class HousesController < ApplicationController
 
   # GET /houses/1
   def show
+    @booking = Booking.new
   end
 
   # GET /houses/new
