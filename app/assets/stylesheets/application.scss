@@ -125,12 +125,18 @@ body {
   text-decoration: none;
 }
 
-.social-icons {
+.social-icons{
+   text-align: right;
+   list-style: none;
+   float:right;
+  
+}
+.social-icons ul li{
   width: 30px;
   height: 30px;
-  text-align: right;
-  list-style: none;
-  float: right;
+  padding-top: 30px;
+   display: inline-block;
+
 }
 
 .social-icons li {
