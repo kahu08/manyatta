@@ -278,7 +278,7 @@ DEPENDENCIES
   pry
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
-  ratyrate
+  ratyrate (~> 1.2.2.alpha)
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
