@@ -33,9 +33,12 @@ source 'https://rubygems.org'
     gem 'launchy'
     gem 'pry'
     gem 'shoulda-matchers'
+    gem 'simplecov', require: false
+    gem 'capybara'
   end
 
   group :development do
+    gem 'annotate'
     gem 'web-console'
     gem 'listen', '~> 3.0.5'
     gem 'spring'

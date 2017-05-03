@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20170503114660) do
     t.integer  "telephone"
     t.text     "location"
     t.string   "street"
+    t.string   "bedrooms"
+    t.string   "minimumstay"
     t.text     "rules"
     t.text     "ammenities"
     t.integer  "price"

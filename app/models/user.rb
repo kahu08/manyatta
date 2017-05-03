@@ -1,3 +1,31 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                     :integer          not null, primary key
+#  admin                  :boolean
+#  name                   :string
+#  telephone              :integer
+#  email                  :string           default(""), not null
+#  encrypted_password     :string           default(""), not null
+#  reset_password_token   :string
+#  reset_password_sent_at :datetime
+#  remember_created_at    :datetime
+#  sign_in_count          :integer          default("0"), not null
+#  current_sign_in_at     :datetime
+#  last_sign_in_at        :datetime
+#  current_sign_in_ip     :inet
+#  last_sign_in_ip        :inet
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  avatar_file_name       :string
+#  avatar_content_type    :string
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
+#  provider               :string
+#  uid                    :string
+#
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -10,6 +38,13 @@ class User < ApplicationRecord
   has_many :houses, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :bookings, dependent: :destroy
+
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
+    validates :name, presence: true, uniqueness: true, length: { in: 3..6 }
+    # validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: true
+    validates :password, confirmation: true 
+    validates_length_of :password, in: 6..20, on: :create
 
 
 # gather your necessary fields from provider to use it on current_user

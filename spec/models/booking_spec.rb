@@ -12,10 +12,12 @@
 #  updated_at :datetime         not null
 #
 
-class Booking < ApplicationRecord
-  belongs_to :user
-  belongs_to :house
-  validates :checkin, presence: true
-  validates :checkout, presence: true
-  validates :occupancy, presence: true
+require 'rails_helper'
+
+RSpec.describe Booking, type: :model do
+  it { should validate_presence_of :checkin}
+  it { should validate_presence_of :checkout}
+  it { should validate_presence_of :occupancy}
+  it { should belong_to :user}
+  it { should belong_to :house}
 end
