@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :regions, only: [:index]
+  resources :regions, only: [:index, :new]
 
   resources :profile, only: [:index, :edit]
 

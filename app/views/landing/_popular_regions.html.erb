@@ -4,15 +4,15 @@
       </div>
 
       <div class="col-sm-12 col-md-12 col-lg-12 nairobi imagesPadding">
-          <h2>Nairobi</h2>
+          <h2>Mombasa</h2>
       </div>
+      <% @regions.each do |region|%>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nakuru imagesPadding">
 
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nakuru imagesPadding">
-
-          <h2>Nakuru</h2>
-      </div>
-
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 baringo imagesPadding">
+            <h2><%= region.name%></h2>
+        </div>
+      <% end %>
+      <%#<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 baringo imagesPadding">
 
           <h2>Baringo</h2>
       </div>
@@ -25,6 +25,6 @@
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 malindi imagesPadding">
 
           <h2>Malindi</h2>
-      </div>
+      </div>%>
 
   </div>
