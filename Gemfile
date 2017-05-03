@@ -26,6 +26,8 @@ source 'https://rubygems.org'
   gem 'omniauth-oauth2', '~> 1.4.0'
   gem "omniauth-google-oauth2", '~> 0.4.1'
   gem 'omniauth-facebook', '~> 4.0.0'
+  gem 'ratyrate', '~> 1.2.2.alpha'
+
 
   group :development, :test do
     gem 'byebug', platform: :mri

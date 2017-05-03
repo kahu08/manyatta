@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
         redirect_to new_user_session_path
       end
   end
+  def admin_controller?
+    !devise_controller? and request.path =~ /^\/admin/
+  end
+  helper_method :admin_controller?
 
   protected
 
