@@ -3,9 +3,11 @@ class CreateHouses < ActiveRecord::Migration[5.0]
     create_table :houses do |t|
       t.string :name
       t.text :description
-      t.integer :telephone
+      t.integer :telephone, :limit => 8
       t.text :location
       t.string :street
+      t.string :bedrooms
+      t.string :minimumstay
       t.text :rules
       t.text :ammenities
       t.integer :price
