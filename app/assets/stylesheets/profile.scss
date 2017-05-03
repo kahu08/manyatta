@@ -1,6 +1,7 @@
 // Place all the styles related to the profile controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+<<<<<<< HEAD
 // .profile-picture {
 //   width: 210px;
 //   height: 210px;
@@ -36,6 +37,36 @@
   background: #FF690F;
   border: none;
 
+=======
+
+.profile {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.profile img {
+  border: 3px solid #FF690F;
+}
+
+.profile h4 {
+  font-size: 23px;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.nav-tabs {
+  background: #FF690F;
+  border: none;
+}
+
+.nav-tabs li a {
+  border: 1px solid white;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Roboto;
+>>>>>>> 206447ac93d9b7328bcde95844d7bc44c281cfd7
 }
 .nav-tabs li a{
   border: 1px solid white;
@@ -44,7 +75,13 @@
     font-weight: bold;
     font-family: Roboto;
 
+<<<<<<< HEAD
 }
 .nav-tabs li a:hover{
     background: #FF690F;
+=======
+.nav-tabs li a:hover {
+  background: #FF690F;
+>>>>>>> 206447ac93d9b7328bcde95844d7bc44c281cfd7
 }
+/*********************************************************/

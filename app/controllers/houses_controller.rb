@@ -8,11 +8,12 @@ class HousesController < ApplicationController
 
   # GET /houses/1
   def show
+    @booking = Booking.new
   end
 
   # GET /houses/new
   def new
-    @house = current_user.houses.new
+    @house= current_user.houses.new
   end
 
   # GET /houses/1/edit
@@ -21,10 +22,14 @@ class HousesController < ApplicationController
 
   # POST /houses
   def create
+    # scaffolded
     @house = current_user.houses.new(house_params)
 
     if @house.save
+      # scaffolded
       redirect_to @house, notice: 'House was successfully created.'
+      # redirect_to discover
+      # redirect_to
     else
       render :new
     end
@@ -53,6 +58,6 @@ class HousesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def house_params
-      params.fetch(:house).permit(:name, :description, :telephone, :street, :rules, :ammenities, :price)
+      params.fetch(:house).permit(:name, :description, :telephone, :location, :street, :rules, :ammenities, :price)
     end
 end

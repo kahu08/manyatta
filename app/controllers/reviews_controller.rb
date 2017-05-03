@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-
+  before_filter :must_login?, only: [:new, :edit, :destroy]
   # GET /reviews
   def index
     @reviews = Review.all

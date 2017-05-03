@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170430230602) do
     t.string   "name"
     t.text     "description"
     t.integer  "telephone"
+    t.text     "location"
     t.string   "street"
     t.text     "rules"
     t.text     "ammenities"
