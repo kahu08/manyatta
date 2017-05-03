@@ -1,4 +1,4 @@
-<%= form_for(review) do |f| %>
+<%= form_for[@house,@review] do |f| %>
   <% if review.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
@@ -13,10 +13,15 @@
 
   <div class="field">
     <%= f.label :comment %>
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment, cols: "40", rows: "3", class: "form-control textarea", placeholder: "Write a review"%>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit, class: "btn btn default", placeholder: "send review" %>
   </div>
 <% end %>
+<div class="row write-review">
+
+    <textarea rows="3" cols="40" class="form-control textarea" placeholder="Write a review"></textarea>
+    <button class="btn btn default">Send Review</button>
+</div>

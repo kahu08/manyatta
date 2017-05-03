@@ -58,6 +58,7 @@
                             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                                 <i class="fa fa-moon-o" aria-hidden="true"></i>
                                 <h5>House minimum stay</h5>
+                                <p><%= @house.minimumstay%></p>
                             </div>
                             <!-- minimum stay -->
                         </div>
@@ -117,11 +118,29 @@
                     <div class="row review">
                         <h1>Reviews</h1>
                         <div class="row write-review">
+                            <%= form_for [@house,@review] do |f| %>
+                                <% if @review.errors.any? %>
+                                    <div id="error_explanation">
+                                    <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
-                            <textarea rows="3" cols="40" class="form-control textarea" placeholder="Write a review"></textarea>
-                            <button class="btn btn default">Send Review</button>
+                                    <ul>
+                                    <% @review.errors.full_messages.each do |message| %>
+                                        <li><%= message %></li>
+                                    <% end %>
+                                    </ul>
+                                    </div>
+                                <% end %>
+
+                                <div class="field">
+                                    <%= f.label :comment %>
+                                    <%= f.text_area :comment, cols: "40", rows: "3", class: "form-control textarea", placeholder: "Write a review"%>
+                                </div>
+
+                                <div class="actions">
+                                    <%= f.submit 'send review', class: 'btn btn-default'%>
+                                </div>
+                            <% end %>
                         </div>
-
                         <div class="row read-reviews well">
                             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                                 <img src="/profileImage.jpg" alt="" class="img-responsive img-thumbnail">
