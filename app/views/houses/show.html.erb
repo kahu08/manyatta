@@ -26,18 +26,19 @@
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title">
                     <h3>Details :</h3>
 
-                </div>
-                <!-- details title -->
-                <!--  details list-->
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 
-                    <div class="row">
-                        <!-- house type -->
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                            <h5>House type</h5>
-                        </div>
-                        <!-- house type -->
+
+                <!-- image section -->
+                <img src="/kisumu.jpg" alt="kisumu" class="img-responsive locationImage">
+                <!-- image section -->
+                <!-- images from database -->
+                  <div class="row">
+                    <%= render("houses/carousel")%>
+                  </div>
+                <div class="row details">
+                    <!-- details title -->
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title">
+                        <h3>Details :</h3>
 
                         <!-- house capacity -->
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -46,11 +47,38 @@
                         </div>
                         <!-- house capacity -->
 
-                        <!-- house bedrooms -->
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <i class="fa fa-bed" aria-hidden="true"></i>
-                            <h5>House bedrooms</h5>
-                            <p><%= @house.bedrooms%></p>
+
+                        <div class="row">
+                            <!-- house type -->
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <h5>House type</h5>
+                            </div>
+                            <!-- house type -->
+
+                            <!-- house capacity -->
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <h5>House capacity</h5>
+                            </div>
+                            <!-- house capacity -->
+
+                            <!-- house bedrooms -->
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                <h5>House  bedrooms</h5>
+                                <p><%= @house.bedrooms%></p>
+                            </div>
+                            <!-- house bedrooms -->
+
+                            <!-- minimum stay -->
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                <h5>House minimum stay</h5>
+                                <p><%= @house.minimumstay%></p>
+                            </div>
+                            <!-- minimum stay -->
+
                         </div>
                         <!-- house bedrooms -->
 
@@ -107,10 +135,18 @@
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title-about">
                         <h3>Rules :</h3>
                     </div>
-                </div>
-                <div class="row  about-text well">
-                    <p><%= @house.rules %></p>
-                </div>
+
+                    <!-- amenities -->
+                    <%# house rules %>
+                    <div class="row about">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title-about">
+                                <h3>Rules :</h3>
+                            </div>
+                        </div>
+                        <div class="row  about-text well">
+                            <p><%= @house.rules %></p>
+                        </div>
 
             </div>
             <%# house rules%>
@@ -156,6 +192,7 @@
                     <% end %>
                 </div>
 
+
             </div>
             <!-- reviews -->
 
@@ -174,4 +211,5 @@
 
     </div>
 
-</div>
+    </div>
+
