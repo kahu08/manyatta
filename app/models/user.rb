@@ -39,6 +39,13 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :bookings, dependent: :destroy
 
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
+    validates :name, presence: true, uniqueness: true, length: { in: 3..6 }
+    # validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: true
+    validates :password, confirmation: true 
+    validates_length_of :password, in: 6..20, on: :create
+
 
 # gather your necessary fields from provider to use it on current_user
   def self.from_omniauth(auth)
