@@ -1149,6 +1149,28 @@
         1,
         1,
         1,
+        1,
+        null
+      ],
+      "/home/donga/projects/manyatta/spec/models/review_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
         null
       ],
       "/home/donga/projects/manyatta/spec/models/user_spec.rb": [
@@ -1182,6 +1204,6 @@
         null
       ]
     },
-    "timestamp": 1493810009
+    "timestamp": 1493810518
   }
 }
