@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :regions, only: [:index]
+
   resources :profile, only: [:index, :edit]
 
 # point controller for omniauth to devise
