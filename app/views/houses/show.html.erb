@@ -143,13 +143,15 @@
                         </div>
                         <div class="row read-reviews well">
                             <% @house.reviews.each do |review| %>
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <%= image_tag review.user.avatar.url(:medium), class: 'img-responsive img-thumbnail'%>
-                                <h4><%= review.user.name%></h4>
-                            </div>
-                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 review-title">
-                                <h2><%= review.comment%></h2>
-                            </div>
+                                <div class="row">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <%= image_tag review.user.avatar.url(:medium), class: 'img-responsive img-thumbnail'%>
+                                        <h4><%= review.user.name%></h4>
+                                    </div>
+                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 review-title">
+                                        <h2><%= review.comment%></h2>
+                                    </div>
+                                </div>
                             <% end %>
                         </div>
 
@@ -157,7 +159,7 @@
                     <!-- reviews -->
 
 
-                </div>
+               
             </div>
             <!--  main content column -->
 
