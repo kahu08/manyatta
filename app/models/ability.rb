@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
 
-    user || = user.new #not logged in guest
+    # user || = user.new #not logged in guest
     
     if user.admin?
       # whichever user is used as admin will manage all CRUD for all user
