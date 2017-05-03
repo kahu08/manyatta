@@ -11,7 +11,6 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :bookings, dependent: :destroy
 
-  ratyrate_rater
 
 # gather your necessary fields from provider to use it on current_user
   def self.from_omniauth(auth)
