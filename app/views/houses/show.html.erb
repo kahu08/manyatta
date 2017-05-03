@@ -142,13 +142,15 @@
                             <% end %>
                         </div>
                         <div class="row read-reviews well">
+                            <% @house.reviews.each do |review| %>
                             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <img src="/profileImage.jpg" alt="" class="img-responsive img-thumbnail">
-                                <h4>Kenneth miratu</h4>
+                                <%= image_tag review.user.avatar.url(:medium), class: 'img-responsive img-thumbnail'%>
+                                <h4><%= review.user.name%></h4>
                             </div>
                             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 review-title">
-                                <h2>This place deserves all the stars</h2>
+                                <h2><%= review.comment%></h2>
                             </div>
+                            <% end %>
                         </div>
 
                     </div>
