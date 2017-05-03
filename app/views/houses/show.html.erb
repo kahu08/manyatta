@@ -1,40 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @house.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @house.description %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @house.telephone %>
-</p>
-
-<p>
-  <strong>Street:</strong>
-  <%= @house.street %>
-</p>
-
-<p>
-  <strong>Rules:</strong>
-  <%= @house.rules %>
-</p>
-
-<p>
-  <strong>Ammenities:</strong>
-  <%= @house.ammenities %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @house.price %>
-</p>
-
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'New Booking', new_house_booking_path(@house,@booking) %> |
 <%= link_to 'Back', houses_path %>
@@ -42,8 +7,8 @@
         <div class="row ">
           <div class="row top-title">
             <!-- title of home -->
-            <h2>Beach House on the white sandy shores of malindi</h2>
-            <h3 id="location">silver sand road malindi</h3>
+            <h2><%= @house.name %></h2>
+            <h3 id="location"><%= @house.street %></h3>
             <!-- title of home -->
           </div>
 
@@ -108,12 +73,12 @@
                                 <h3>About property :</h3>
                             </div>
 
-                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 home-title">
-                                <h3>Beach House on the white sandy shores of malindi</h3>
-                            </div>
+                            <%#<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 home-title">
+                                <h3></h3>
+                            </div>%>
                         </div>
                         <div class="row  about-text well">
-                            <p>This property, about it.</p>
+                            <p><%= @house.description %></p>
                         </div>
 
                     </div>
@@ -127,18 +92,26 @@
                                 <h4>Ammenity title:</h4>
                             </div>
                             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                <ul>
-                                    <li>Item 1</li>
-                                    <li>item 2</li>
-                                    <li>item 3</li>
-                                </ul>
+                                <p><%= @house.ammenities %></p>
                             </div>
 
                         </div>
 
                     </div>
                     <!-- amenities -->
+                    <%# house rules %>
+                    <div class="row about">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title-about">
+                                <h3>Rules :</h3>
+                            </div>                           
+                        </div>
+                        <div class="row  about-text well">
+                            <p><%= @house.rules %></p>
+                        </div>
 
+                    </div>
+                    <%# house rules%>
                     <!-- reviews -->
                     <div class="row review">
                         <h1>Reviews</h1>
