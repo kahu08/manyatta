@@ -23,6 +23,8 @@ source 'https://rubygems.org'
   gem 'omniauth-oauth2', '~> 1.4.0'
   gem "omniauth-google-oauth2", '~> 0.4.1'
   gem 'omniauth-facebook', '~> 4.0.0'
+  gem 'ratyrate'
+
 
   group :development, :test do
     gem 'byebug', platform: :mri
@@ -42,4 +44,3 @@ source 'https://rubygems.org'
 
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   ruby "2.2.3"
-
