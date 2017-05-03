@@ -6,6 +6,8 @@ class CreateHouses < ActiveRecord::Migration[5.0]
       t.integer :telephone
       t.text :location
       t.string :street
+      t.string :bedrooms
+      t.string :minimumstay
       t.text :rules
       t.text :ammenities
       t.integer :price
