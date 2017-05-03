@@ -1131,6 +1131,16 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/home/donga/projects/manyatta/app/models/review.rb": [
@@ -1150,6 +1160,46 @@
         1,
         1,
         1,
+        null
+      ],
+      "/home/donga/projects/manyatta/spec/models/house_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
         null
       ],
       "/home/donga/projects/manyatta/spec/models/review_spec.rb": [
@@ -1204,6 +1254,6 @@
         null
       ]
     },
-    "timestamp": 1493810518
+    "timestamp": 1493810977
   }
 }

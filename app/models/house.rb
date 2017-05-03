@@ -22,4 +22,14 @@ class House < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
   belongs_to :user
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :telephone, presence: true
+  validates :location, presence: true
+  validates :street, presence: true
+  validates :bedrooms, presence: true
+  validates :minimumstay, presence: true
+  validates :rules, presence: true
+  validates :ammenities, presence: true
+  validates :price, presence: true
 end
