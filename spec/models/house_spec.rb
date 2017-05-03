@@ -33,6 +33,7 @@ RSpec.describe House, type: :model do
     it {should validate_presence_of :ammenities}
     it {should validate_presence_of :price}
     it {should belong_to :user}
+    it {should belong_to :region}
     it {should have_many :bookings}
     it {should have_many :reviews}
 end

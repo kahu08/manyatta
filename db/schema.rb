@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170503122525) do
   create_table "houses", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "telephone"
+    t.bigint   "telephone"
     t.text     "location"
     t.string   "street"
     t.string   "bedrooms"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170503122525) do
     t.text     "ammenities"
     t.integer  "price"
     t.integer  "user_id"
+    t.integer  "region_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
