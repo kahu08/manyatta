@@ -24,6 +24,7 @@ class BookingsController < ApplicationController
   def create
     @house = House.find(params[:house_id])
     @booking = @house.bookings.new(booking_params)
+    @booking.user = current_user
 
     if @booking.save
       redirect_to @house, notice: 'Booking was successfully created.'

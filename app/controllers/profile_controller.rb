@@ -1,10 +1,7 @@
 class ProfileController < ApplicationController
   def index
   @user=current_user
-<<<<<<< HEAD
-=======
   @houses = House.all
->>>>>>> 206447ac93d9b7328bcde95844d7bc44c281cfd7
   end
 
   def edit
