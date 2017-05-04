@@ -35,4 +35,9 @@ class House < ApplicationRecord
   validates :rules, presence: true
   validates :ammenities, presence: true
   validates :price, presence: true
+
+  # searching params
+  def self.search(search)
+    where("name ILIKE ? OR location ILIKE ?", "%#{search}%", "%#{search}%")
+  end
 end

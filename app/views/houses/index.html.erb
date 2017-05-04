@@ -10,11 +10,15 @@
 
     <span class="input-group-btn">
 
-      <button type="button" name="button" class="btn btn-default btn-lg" <%= submit_tag "Search", :location => nil%>Search</button>
+      <%= submit_tag "Search", :name => nil, class:"btn btn-default btn-lg" %>
 
     </span>
 
   </div>
+  <% end %>
+   <!-- alert the user that there aren't any matching houses -->
+  <% if @houses.blank? %>
+    <h4>There are no houses in <%= params[:search] %> location.</h4>
   <% end %>
 
 </div>
@@ -25,7 +29,7 @@
     <%@houses.each do |house|%>
     <!-- link to show -->
     <%= link_to house_path(house), :action => 'go' do %>
-    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 img-thumbnail">
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 img-thumbnail">
       <div class="thumbnail">
         <img <%= image_tag house.images[0].url%>
       </div>
