@@ -168,8 +168,7 @@
 
     <!-- booking form column -->
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-      <button type="submit" name="button">book Now</button>
+      <%= render 'bookings/form', booking: @booking %>
       <%=rating_for @house, "experience", target:'#hintDiv',targetFormat: "Score: {score}", disable_after_rate: false%>
       <div id="hintDiv"></div>
     </div>
