@@ -35,6 +35,12 @@
             <li>
               <%=link_to "Add House",  new_house_path%>
             </li>
+            <!-- create region -->
+            <% if current_user.admin? %>
+              <li>
+                <%=link_to "create Region", new_region_path%>
+              </li>
+            <% end %>
             <!-- sign out -->
             <li>
               <%=link_to "sign out", destroy_user_session_path, method: :delete%>
