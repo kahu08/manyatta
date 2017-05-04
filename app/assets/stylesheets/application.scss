@@ -12,7 +12,9 @@ body {
 
 .navbar {
   margin-bottom: 0;
+  border-radius: 0;
 }
+
 /**user login and sign-up styles**/
 // .stuff{
 //   background-color: rgb(227, 225, 25);
@@ -145,3 +147,23 @@ body {
   display: inline;
 }
 /*****************End of footer styling**************/
+.navbar-inverse .navbar-header .heads{
+font-size: 33px;
+font-weight: bolder;
+color: #FF690F;
+font-family: sans-serif;
+}
+.navbar-inverse .navbar-nav li a{
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+.navbar-inverse .navbar-nav li a:hover{
+  color: #FF690F;
+  text-decoration: underline;
+}
+.navbar-inverse .navbar-nav li button{
+  background: #FF690F;
+  text-transform: capitalize;
+  margin-top: 6px;
+  border:1px solid  #FF690F;
+}
