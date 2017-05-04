@@ -17,7 +17,7 @@ class RegionsController < ApplicationController
   def create
     @region = Region.new(region_params)
     if @region.save
-      redirect_to root_path
+      redirect_to root_path, notice: 'region successfully created!!'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class RegionsController < ApplicationController
 
   def update
     if @region.update(region_params)
-      redirect_to root_path
+      redirect_to root_path, notice: 'region was updated'
     else
       render :edit
     end
@@ -36,8 +36,7 @@ class RegionsController < ApplicationController
 
   def destroy
     @region.destroy
-    redirect_to root_path
-    notice: "destroyed successfully"
+    redirect_to root_path, notice: "destroyed successfully"
   end
 
   private
@@ -47,6 +46,6 @@ class RegionsController < ApplicationController
   end
 
   def region_params
-    params.require(:region).permit(:name)
+    params.require(:region).permit(:name, :image)
   end
 end
