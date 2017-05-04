@@ -28,12 +28,12 @@
 
 <div class="field">
   <%= f.label :bedrooms %>
-  <%= f.text_field :bedrooms %>
+  <%= f.number_field :bedrooms %>
 </div>
 
 <div class="field">
   <%= f.label :minimumstay %>
-  <%= f.text_field :minimumstay %>
+  <%= f.number_field :minimumstay %>
 </div>
 
 <div class="field">
@@ -64,6 +64,11 @@
 <div class="field">
   <%= f.label :price %>
   <%= f.number_field :price %>
+</div>
+
+<div class="field">
+  <%= f.label :images%>
+  <%= f.file_field :images, multiple: true%>
 </div>
 
 <div class="actions">

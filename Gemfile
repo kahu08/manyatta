@@ -20,9 +20,14 @@ source 'https://rubygems.org'
   # gem 'jbuilder', '~> 2.5'
   gem 'cancancan', '~> 1.16'
   gem 'paperclip', '~> 5.1'
+  gem 'carrierwave', '~> 1.1'
+  # install rmagick sudo apt-get install imagemagick libmagickwand-dev locally
+  gem 'rmagick'
   gem 'omniauth-oauth2', '~> 1.4.0'
   gem "omniauth-google-oauth2", '~> 0.4.1'
   gem 'omniauth-facebook', '~> 4.0.0'
+  gem 'ratyrate', '~> 1.2.2.alpha'
+
 
   group :development, :test do
     gem 'byebug', platform: :mri
@@ -45,4 +50,3 @@ source 'https://rubygems.org'
 
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   ruby "2.2.3"
-

@@ -27,6 +27,7 @@
 #
 
 class User < ApplicationRecord
+  ratyrate_rater
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "30x30#", large: "500x500>"}
@@ -43,7 +44,7 @@ class User < ApplicationRecord
 
     validates :name, presence: true, uniqueness: true, length: { in: 3..15 }
     # validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: true
-    validates :password, confirmation: true 
+    validates :password, confirmation: true
     validates_length_of :password, in: 6..20, on: :create
 
 
