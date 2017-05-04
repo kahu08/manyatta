@@ -88,7 +88,7 @@
 
       </div>
       <!-- about property -->
-      
+
       <!-- amenities -->
       <div class="row amenities">
         <h1>Amenities</h1>
@@ -105,83 +105,76 @@
       </div>
       <!-- amenities -->
       <%# house rules %>
+
       <div class="row about">
         <div class="row">
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title-about">
             <h3>Rules :</h3>
           </div>
-
-          <!-- amenities -->
-          <%# house rules %>
-          <div class="row about">
-            <div class="row">
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 title-about">
-                <h3>Rules :</h3>
-              </div>
-            </div>
-            <div class="row  about-text well">
-              <p><%= @house.rules %></p>
-            </div>
-
-          </div>
-          <%# house rules%>
-          <!-- reviews -->
-          <div class="row review">
-            <h1>Reviews</h1>
-            <div class="row write-review">
-              <%= form_for [@house,@review] do |f| %>
-              <% if @review.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(review.errors.count, "error") %>
-                  prohibited this review from being saved:</h2>
-
-                <ul>
-                  <% @review.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
-
-              <div class="field">
-                <%= f.label :comment %>
-                <%= f.text_area :comment, cols: "40", rows: "3", class: "form-control textarea", placeholder: "Write a review"%>
-              </div>
-
-              <div class="actions">
-                <%= f.submit 'send review', class: 'btn btn-default'%>
-              </div>
-              <% end %>
-            </div>
-            <div class="row read-reviews well">
-              <% @house.reviews.each do |review| %>
-              <div class="row">
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                  <%= image_tag review.user.avatar.url(:medium), class: 'img-responsive img-thumbnail'%>
-                  <h4><%= review.user.name%></h4>
-                </div>
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 review-title">
-                  <h2><%= review.comment%></h2>
-                </div>
-              </div>
-              <% end %>
-            </div>
-
-          </div>
-          <!-- reviews -->
-
         </div>
-        <!--  main content column -->
-
-        <!-- booking form column -->
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-          <button type="submit" name="button">book Now</button>
-          <%=rating_for @house, "experience", target:'#hintDiv',targetFormat: "Score: {score}", disable_after_rate: false%>
-          <div id="hintDiv"></div>
+        <div class="row  about-text well">
+          <p><%= @house.rules %></p>
         </div>
-        <!-- booking form column -->
 
       </div>
+      <%# house rules%>
+      <!-- reviews -->
+      <div class="row review">
+        <h1>Reviews</h1>
+        <div class="row write-review">
+          <%= form_for [@house,@review] do |f| %>
+          <% if @review.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(review.errors.count, "error") %>
+              prohibited this review from being saved:</h2>
+
+            <ul>
+              <% @review.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :comment %>
+            <%= f.text_area :comment, cols: "40", rows: "3", class: "form-control textarea", placeholder: "Write a review"%>
+          </div>
+
+          <div class="actions">
+            <%= f.submit 'send review', class: 'btn btn-default'%>
+          </div>
+          <% end %>
+        </div>
+        <div class="row read-reviews well">
+          <% @house.reviews.each do |review| %>
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <%= image_tag review.user.avatar.url(:medium), class: 'img-responsive img-thumbnail'%>
+              <h4><%= review.user.name%></h4>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 review-title">
+              <h2><%= review.comment%></h2>
+            </div>
+          </div>
+          <% end %>
+        </div>
+
+      </div>
+      <!-- reviews -->
 
     </div>
+    <!--  main content column -->
+
+    <!-- booking form column -->
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+      <button type="submit" name="button">book Now</button>
+      <%=rating_for @house, "experience", target:'#hintDiv',targetFormat: "Score: {score}", disable_after_rate: false%>
+      <div id="hintDiv"></div>
+    </div>
+    <!-- booking form column -->
+
+  </div>
+
+</div>
