@@ -1,7 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "landing.scss";
+@import 'devise.scss'; //sign in form
 @import "house.scss";
+@import 'housediscover.scss';
 @import "profile.scss"; // body
 
 body {
@@ -130,7 +132,7 @@ body {
    text-align: right;
    list-style: none;
    float:right;
-  
+
 }
 .social-icons ul li{
   width: 30px;

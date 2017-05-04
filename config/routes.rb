@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :regions
   post '/rate' => 'rater#create', :as => 'rate'
   resources :profile, only: [:index, :edit]
 
