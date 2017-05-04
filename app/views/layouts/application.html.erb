@@ -16,11 +16,15 @@
             <%= render("/layouts/navbar")%>
           </div>
         </div>
-        <div class="row">
+        <div class="row" >
           <div class="container-fluid">
           <%= flash[:notice]%>
           <%= flash[:alert]%>
+          <div id="content">
             <%= yield %>
+          </div>
+
+
           </div>
         </div>
         <div class="row">

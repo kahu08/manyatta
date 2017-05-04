@@ -7,12 +7,17 @@
 
 body {
   overflow-x: hidden;
+  border: none;
 }
+
 // navbar
 
+
 .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
+border: none;
+padding: 1% 6%;
+background: rgb(0,0,0);
+
 }
 
 /**user login and sign-up styles**/
@@ -156,14 +161,24 @@ font-family: sans-serif;
 .navbar-inverse .navbar-nav li a{
   color: #FFFFFF;
   text-transform: capitalize;
+  margin-right: 5px;
 }
 .navbar-inverse .navbar-nav li a:hover{
   color: #FF690F;
-  text-decoration: underline;
+  border-top: 2px solid #ffffff;
+  font-weight: bolder;
 }
 .navbar-inverse .navbar-nav li button{
   background: #FF690F;
   text-transform: capitalize;
-  margin-top: 6px;
+
   border:1px solid  #FF690F;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+.main-content{
+  margin-bottom: 5%
+}
+#content{
+  margin-top: 5.7%;
 }
