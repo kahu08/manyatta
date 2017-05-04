@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503143823) do
+ActiveRecord::Schema.define(version: 20170504063111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,16 @@ ActiveRecord::Schema.define(version: 20170503143823) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type", using: :btree
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "reviews", force: :cascade do |t|
