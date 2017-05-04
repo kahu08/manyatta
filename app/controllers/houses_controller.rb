@@ -4,15 +4,23 @@ class HousesController < ApplicationController
   # GET /houses
   def index
     @houses = House.all
+    if params[:search]
+      # display matching houses in descending order
+      @houses = House.search(params[:search]).order("created_at DESC")
+    else
+      @houses = House.all.order("created_at DESC")
+    end
   end
 
   # GET /houses/1
   def show
+    @booking = Booking.new
+    @review = Review.new
   end
 
   # GET /houses/new
   def new
-    @house = current_user.houses.new
+    @house= current_user.houses.new
   end
 
   # GET /houses/1/edit
@@ -21,10 +29,15 @@ class HousesController < ApplicationController
 
   # POST /houses
   def create
+    # scaffolded
+    # @region = Region.find(:id)
     @house = current_user.houses.new(house_params)
-
+    # @house.user = current_user
     if @house.save
+      # scaffolded
       redirect_to @house, notice: 'House was successfully created.'
+      # redirect_to discover
+      # redirect_to
     else
       render :new
     end
@@ -53,6 +66,6 @@ class HousesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def house_params
-      params.fetch(:house).permit(:name, :description, :telephone, :street, :rules, :ammenities, :price)
+      params.fetch(:house).permit(:name, :region_id, :description, :telephone, :location, :street, :rules, :ammenities, :price, :bedrooms, :minimumstay, {images: []})
     end
 end

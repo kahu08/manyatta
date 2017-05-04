@@ -1,18 +1,19 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_booking, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :must_login?, only: [:new, :edit, :destroy]
   # GET /bookings
   def index
     @bookings = Booking.all
   end
 
   # GET /bookings/1
-  def show
-  end
+  # def show
+  # end
 
   # GET /bookings/new
   def new
-    @booking = Booking.new
+    # @house = House.find(params[:house_id])
+    @booking = @house.bookings.new
   end
 
   # GET /bookings/1/edit
@@ -21,10 +22,11 @@ class BookingsController < ApplicationController
 
   # POST /bookings
   def create
-    @booking = Booking.new(booking_params)
-
+    # @house = House.find(params[:house_id])
+    @booking = @house.bookings.new(booking_params)
+    @booking.user = current_user
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created.'
+      redirect_to @house, notice: 'Booking was successfully created.'
     else
       render :new
     end
@@ -33,7 +35,7 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1
   def update
     if @booking.update(booking_params)
-      redirect_to @booking, notice: 'Booking was successfully updated.'
+      redirect_to @house, notice: 'Booking was successfully updated.'
     else
       render :edit
     end
@@ -48,7 +50,7 @@ class BookingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
-      @booking = Booking.find(params[:id])
+      @house = House.find(params[:house_id])
     end
 
     # Only allow a trusted parameter "white list" through.

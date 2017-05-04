@@ -1,19 +1,15 @@
-<div class="tab-pane" role="tabpanel" id="houses">
-    <% if houses.any? %>
-      <%@houses.each do |house|%>
-      <%= image_tag%>
-      <p>
-        <strong>Name:</strong>
-        <%=house.name%>
-      </p>
-      <p>
-        <strong>Location:</strong>
-        <%=house.street%>
-      </p>
-      <p>
-        <strong>Price</strong>
-        <%=house.price%>
-      </p>
-      <%end%>
-    <% end %>
-</div>
+<!-- show the house tab if the current user owns any houses -->
+  <%current_user.houses.each do |house|%>
+  <p>
+    <strong>Name:</strong>
+    <%=house.name%>
+  </p>
+  <p>
+    <strong>Location:</strong>
+    <%=house.street%>
+  </p>
+  <p>
+    <strong>Price</strong>
+    <%=house.price%>
+  </p>
+  <%end%>
