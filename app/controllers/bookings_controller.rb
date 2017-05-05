@@ -27,6 +27,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       redirect_to @house, notice: 'Booking was successfully created.'
+      respond_to do |format|
+        format.html {redirect_to @house}
+        format.js
+      end
     else
       render :new
     end
