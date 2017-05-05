@@ -68,23 +68,10 @@
         <img <%= image_tag house.images[0].url%>
       </div>
       <h3><%= house.name%></h3>
-      <p class="icons">
-        <span class="star-icons">
-          <i class="fa fa-star" aria-hidden="true"></i>
-        </span>
-        <span class="star-icons">
-          <i class="fa fa-star" aria-hidden="true"></i>
-        </span>
-        <span class="star-icons">
-          <i class="fa fa-star" aria-hidden="true"></i>
-        </span>
-        <span class="star-icons">
-          <i class="fa fa-star" aria-hidden="true"></i>
-        </span>
-        <span class="star-icons">
-          <i class="fa fa-star-half" aria-hidden="true"></i>
-        </span>
-      </p>
+      <%=rating_for house, "experience", target:'#hintDiv',targetFormat: "Score: {score}", disable_after_rate: false%>
+
+      <div id="hintDiv"></div>
+
       <h4>
         <span class="house-location"><%= house.location%></span>
         <span class="price">Ksh:<%= house.price%></span>

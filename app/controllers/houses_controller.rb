@@ -24,9 +24,8 @@ class HousesController < ApplicationController
   # POST /houses
   def create
     # scaffolded
-    # @region = Region.find(:id)
     @house = current_user.houses.new(house_params)
-    # @house.user = current_user
+
     if @house.save
       # scaffolded
       redirect_to @house, notice: 'House was successfully created.'
@@ -60,6 +59,6 @@ class HousesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def house_params
-      params.fetch(:house).permit(:name, :region_id, :description, :telephone, :location, :street, :rules, :ammenities, :price, :bedrooms, :minimumstay)
+      params.fetch(:house).permit(:name, :region_id,:description, :telephone, :location, :street, :rules, :ammenities, :price, :bedrooms, :minimumstay, {images: []})
     end
 end
