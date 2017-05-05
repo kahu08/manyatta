@@ -8,6 +8,9 @@
         <script src="https://use.fontawesome.com/5e20327b09.js"></script>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDShorX3OZqv9yvXF1eDkCzPn4Lwx1b86w&callback=initMap">
+        </script>
     </head>
 
     <body>
@@ -18,11 +21,7 @@
         </div>
         <div class="row" >
           <div class="container-fluid">
-<<<<<<< HEAD
-          <%= flash[:notice]%>
-          <%= flash[:alert]%>
           <div id="content">
-=======
           <% if notice %>
           <div id="notice_wrapper">
             <p class="notice"><%= notice %></p>
@@ -32,7 +31,6 @@
               <p class="alert"><%= alert %></p>
             </div>
           <% end %>
->>>>>>> 21532d39869010421b1a3e110c10536ca5c96789
             <%= yield %>
           </div>
 
