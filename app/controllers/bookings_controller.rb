@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking = @house.bookings.new(booking_params)
     @booking.user = current_user
     if @booking.save
-      redirect_to @house, notice: 'Booking was successfully created.'
+      redirect_to profile_index_path, notice: 'Booking was successfully created.'
     else
       render :new
     end
