@@ -15,6 +15,7 @@ body {
 // alerts
 #notice_wrapper{
   position: absolute;
+
   top: 0;
   width: 100%;
   z-index: 999;
@@ -51,6 +52,7 @@ background: rgb(0,0,0);
   padding: 30px;
   background: #ffffff;
   margin: 50px auto;
+  margin-top: 8%;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.92);
   -moz-box-shadow: 0 0 18px rgba(0, 0, 0, 0.92);
   -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.92);
@@ -137,7 +139,7 @@ background-color: #FF690F;
 }
 .address{
   text-transform: capitalize;
-  text-align: center;
+
 }
 
 .address h4{

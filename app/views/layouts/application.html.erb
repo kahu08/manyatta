@@ -18,11 +18,7 @@
         </div>
         <div class="row" >
           <div class="container-fluid">
-<<<<<<< HEAD
-          <%= flash[:notice]%>
-          <%= flash[:alert]%>
-          <div id="content">
-=======
+
           <% if notice %>
           <div id="notice_wrapper">
             <p class="notice"><%= notice %></p>
@@ -32,7 +28,7 @@
               <p class="alert"><%= alert %></p>
             </div>
           <% end %>
->>>>>>> 21532d39869010421b1a3e110c10536ca5c96789
+
             <%= yield %>
           </div>
 

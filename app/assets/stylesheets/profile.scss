@@ -4,12 +4,14 @@
 
 .profile {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 8%;
+
   margin-bottom: 5%;
 }
 
 .profile img {
   border: 3px solid #FF690F;
+  padding: 1%;
 }
 
 .profile h4 {
@@ -21,6 +23,7 @@
 .nav-tabs {
   background: #FF690F;
   border: none;
+  margin-bottom: 5%;
 }
 
 .nav-tabs li a {
@@ -33,5 +36,22 @@
 
 .nav-tabs li a:hover {
   background: #FF690F;
+}
+.edit-btn {
+text-align: center;
+}
+.edit-btn a {
+width: 200px;
+padding: 0.5% 2%;
+text-transform: capitalize;
+font-size: 16px;
+font-weight: bold;
+background-color:#FF690F;
+border:1px solid #FF690F;
+}
+.edit-btn a:hover{
+background-color:#FF690F;
+border:1px solid #FF690F;
+
 }
 /*********************************************************/
