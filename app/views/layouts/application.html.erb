@@ -8,6 +8,9 @@
         <script src="https://use.fontawesome.com/5e20327b09.js"></script>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDShorX3OZqv9yvXF1eDkCzPn4Lwx1b86w&callback=initMap">
+        </script>
     </head>
 
     <body>
@@ -28,7 +31,6 @@
               <p class="alert"><%= alert %></p>
             </div>
           <% end %>
-          <div class="yield">
             <%= yield %>
           </div>
           </div>

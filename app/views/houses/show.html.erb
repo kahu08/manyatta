@@ -161,13 +161,22 @@
 
     </div>
     <!--  main content column -->
-
+    
     <!-- booking form column -->
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <%= render 'bookings/form', booking: @booking %>
       <%=rating_for @house, "experience", target:'#hintDiv',targetFormat: "Score: {score}", disable_after_rate: false%>
       <div id="hintDiv"></div>
+
+      <%# google map start...... %>
+      <p style="display:none;" id="lat"><%= @house.latitude%></p>
+      <p style="display:none;" id="lng"><%= @house.longitude%></p>
+    <h3><%= @house.name%> Map</h3>
+    <div id="map"></div>
+    
     </div>
+    <%# .......google map end %>
+
     <!-- booking form column -->
 
   </div>
