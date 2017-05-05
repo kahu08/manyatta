@@ -19,6 +19,8 @@
 #
 
 class House < ApplicationRecord
+  geocoded_by :location
+  after_validation :geocode
   ratyrate_rateable "experience"
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
