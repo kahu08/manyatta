@@ -21,7 +21,6 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    # @house = House.find(params[:house_id])
     @review = @house.reviews.new(review_params)
     @review.user = current_user
     if @review.save

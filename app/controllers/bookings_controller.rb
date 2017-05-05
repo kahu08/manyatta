@@ -6,13 +6,8 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  # GET /bookings/1
-  # def show
-  # end
-
   # GET /bookings/new
   def new
-    # @house = House.find(params[:house_id])
     @booking = @house.bookings.new
   end
 
@@ -22,7 +17,6 @@ class BookingsController < ApplicationController
 
   # POST /bookings
   def create
-    # @house = House.find(params[:house_id])
     @booking = @house.bookings.new(booking_params)
     @booking.user = current_user
     if @booking.save
