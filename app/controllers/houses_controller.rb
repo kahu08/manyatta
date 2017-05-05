@@ -12,22 +12,22 @@ class HousesController < ApplicationController
     end
   end
 
-  # GET /houses/1
+ # GET /houses/1
   def show
     @booking = Booking.new
     @review = Review.new
   end
 
-  # GET /houses/new
+ # GET /houses/new
   def new
     @house= current_user.houses.new
   end
 
-  # GET /houses/1/edit
+ # GET /houses/1/edit
   def edit
   end
 
-  # POST /houses
+ # POST /houses
   def create
     @house = current_user.houses.new(house_params)
     if @house.save
@@ -37,7 +37,7 @@ class HousesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /houses/1
+ # PATCH/PUT /houses/1
   def update
     if @house.update(house_params)
       redirect_to @house, notice: 'House was successfully updated.'
@@ -46,19 +46,19 @@ class HousesController < ApplicationController
     end
   end
 
-  # DELETE /houses/1
+ # DELETE /houses/1
   def destroy
     @house.destroy
     redirect_to houses_url, notice: 'House was successfully destroyed.'
   end
 
-  private
+ private
     # Use callbacks to share common setup or constraints between actions.
     def set_house
       @house = House.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+   # Only allow a trusted parameter "white list" through.
     def house_params
       params.fetch(:house).permit(:name, :region_id, :description, :telephone, :location, :latitude, :longitude, :street, :rules, :ammenities, :price, :bedrooms, :minimumstay, {images: []})
     end

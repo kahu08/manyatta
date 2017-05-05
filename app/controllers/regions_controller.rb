@@ -10,7 +10,7 @@ class RegionsController < ApplicationController
 
   end
 
-  def new 
+  def new
     @region = Region.new
   end
 
