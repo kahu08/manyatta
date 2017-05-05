@@ -1,40 +1,64 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
 
-<h1>Houses</h1>
-<% @houses.each do |house|%>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>owner</th>
-      <th>Description</th>
-      <th>Telephone</th>
-      <th>Street</th>
-      <th>Rules</th>
-      <th>Ammenities</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!-- container for the search -->
+<div class="container search">
+  <%= form_tag(houses_path, :method => "get", id: "search-form") do %>
 
-  <tbody>
-    <tr>
-      <td><%= house.name %></td>
-      <td><%= house.user.name%></td>
-      <td><%= house.description %></td>
-      <td><%= house.telephone %></td>
-      <td><%= house.street %></td>
-      <td><%= house.rules %></td>
-      <td><%= house.ammenities %></td>
-      <td><%= house.price %></td>
-      <td><%= link_to 'View', house %></td>
-      <td><%= link_to 'Edit', edit_house_path(house) %></td>
-      <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  </tbody>
-</table>
+  <div class="input-group input-group-lg">
 
-<%end%>
-<br>
+    <%= text_field_tag :search, params[:search], placeholder: "Search for a location.....", class:"form-control"%>
 
-<%= link_to 'New House', new_house_path %>
+    <span class="input-group-btn">
+
+      <%= submit_tag "Search", :name => nil, class:"btn btn-default btn-lg" %>
+
+    </span>
+
+  </div>
+  <% end %>
+   <!-- alert the user that there aren't any matching houses -->
+  <% if @houses.blank? %>
+    <h4>There are no houses in <%= params[:search] %> location.</h4>
+  <% end %>
+
+</div>
+<!-- container for the search -->
+<div class="container locations">
+
+  <div class="row location-area">
+    <%@houses.each do |house|%>
+    <!-- link to show -->
+    <%= link_to house_path(house), :action => 'go' do %>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 img-thumbnail">
+      <div class="thumbnail">
+        <img <%= image_tag house.images[0].url%>
+      </div>
+      <h3><%= house.name%></h3>
+      <p class="icons">
+        <span class="star-icons">
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </span>
+        <span class="star-icons">
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </span>
+        <span class="star-icons">
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </span>
+        <span class="star-icons">
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </span>
+        <span class="star-icons">
+          <i class="fa fa-star-half" aria-hidden="true"></i>
+        </span>
+      </p>
+      <h4>
+        <span class="house-location"><%= house.location%></span>
+        <span class="price">Ksh:<%= house.price%></span>
+      </h4>
+
+    </div>
+    <%end%>
+    <!-- end link -->
+    <%end%>
+  </div>
+</div>

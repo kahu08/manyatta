@@ -56,7 +56,7 @@
               <p><%= @house.bedrooms%></p>
             </div>
             <!-- house bedrooms -->
-
+            
             <!-- minimum stay -->
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <i class="fa fa-moon-o" aria-hidden="true"></i>
@@ -168,8 +168,7 @@
 
     <!-- booking form column -->
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-      <button type="submit" name="button">book Now</button>
+      <%= render 'bookings/form', booking: @booking %>
       <%=rating_for @house, "experience", target:'#hintDiv',targetFormat: "Score: {score}", disable_after_rate: false%>
       <div id="hintDiv"></div>
     </div>

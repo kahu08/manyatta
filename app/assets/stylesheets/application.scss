@@ -3,11 +3,31 @@
 @import "landing.scss";
 @import 'devise.scss'; //sign in form
 @import "house.scss";
+@import 'about.scss';
+@import 'housediscover.scss';
 @import "profile.scss"; // body
 
 body {
   overflow-x: hidden;
   border: none;
+}
+
+// alerts
+#notice_wrapper{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(135, 216, 211, 0.85);
+  .notice, .alert{
+  padding: 1.75rem 0;
+  text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
 }
 
 // navbar
@@ -99,13 +119,7 @@ background-color: #FF690F;
   margin-top: 20px;
     margin-bottom: 20px;
 }
-.stuff .actions input{
 
-
-}
-.stuff .actions input:hover{
-
-}
 /**end of profile and user styling**/
 /*****************footer styling*********************/
 .site-footer {

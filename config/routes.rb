@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :regions
   post '/rate' => 'rater#create', :as => 'rate'
   resources :profile, only: [:index, :edit]
-
+  resources :about, :only => [:index]
 # point controller for omniauth to devise
   devise_for :users, controllers: { omniauth_callbacks: "callbacks"}
 

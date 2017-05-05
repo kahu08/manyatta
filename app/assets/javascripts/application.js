@@ -19,3 +19,12 @@ function adjust_textarea(h) {
     h.style.height = "20px";
     h.style.height = (h.scrollHeight) + "px";
 }
+
+          $(document).ready(function(){
+            setTimeout(function(){
+              $('#notice_wrapper').fadeOut("slow", function(){
+                $(this).remove();
+              })
+            }, 3500);
+          });
+        

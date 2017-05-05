@@ -12,6 +12,9 @@
 </div>
 <% end %>
 
+<div class="field">
+ <%= f.collection_select(:region_id, Region.all, :id, :name, :prompt => 'Select')%>
+</div>
 
 <div class="field">
   <%= f.label :name %>
