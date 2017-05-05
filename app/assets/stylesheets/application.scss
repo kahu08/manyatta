@@ -41,7 +41,7 @@ background: rgb(0,0,0);
   background: #4D4D4D;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #797979;
+  color:#ffffff ;
   font-size: 18px;
   font-weight: 100;
   padding: 20px;
@@ -78,11 +78,12 @@ background: rgb(0,0,0);
   -moz-box-shadow: inset 0 1px 0 0 #45D6D6;
   -webkit-box-shadow: inset 0 1px 0 0 #45D6D6;
   box-shadow: inset 0 1px 0 0 #45D6D6;
-  background-color: #2CBBBB;
-  border: 1px solid #27A0A0;
+  background: #FF690F;
+  border:1px solid  #FF690F;
   display: inline-block;
   cursor: pointer;
   color: #FFFFFF;
+
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   padding: 8px 18px;
@@ -92,13 +93,23 @@ background: rgb(0,0,0);
 
 .form-style input[type="button"]:hover,
 .form-style input[type="submit"]:hover {
-  background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-  background-color: #34CACA;
+background-color: #FF690F;
+}
+.stuff input{
+  margin-top: 20px;
+    margin-bottom: 20px;
+}
+.stuff .actions input{
+
+
+}
+.stuff .actions input:hover{
+
 }
 /**end of profile and user styling**/
 /*****************footer styling*********************/
 .site-footer {
-  background-color: #222;
+  background-color: #000;
   color: #ffffff;
   margin-top: 30px;
   padding-top: 30px;
@@ -110,7 +121,16 @@ background: rgb(0,0,0);
   color: #b2b2b2;
   border-top: 1px solid #b2b2b2;
 }
+.address{
+  text-transform: capitalize;
+  text-align: center;
+}
 
+.address h4{
+  color: #FF690F;
+  font-size: 28px;
+  border-bottom: 1px solid #FF690F;
+}
 .footer-nav {
   text-align: right;
   list-style: none;
@@ -134,26 +154,10 @@ background: rgb(0,0,0);
   text-decoration: none;
 }
 
-.social-icons{
-   text-align: right;
-   list-style: none;
-   float:right;
 
-}
-.social-icons ul li{
-  width: 30px;
-  height: 30px;
-  padding-top: 30px;
-   display: inline-block;
-
-}
-
-.social-icons li {
-  display: inline;
-}
 /*****************End of footer styling**************/
 .navbar-inverse .navbar-header .heads{
-font-size: 33px;
+font-size: 25px;
 font-weight: bolder;
 color: #FF690F;
 font-family: sans-serif;
@@ -180,5 +184,8 @@ font-family: sans-serif;
   margin-bottom: 5%
 }
 #content{
-  margin-top: 5.7%;
+  margin-top: 5%;
+}
+.dropdown-menu{
+  background: black;
 }
