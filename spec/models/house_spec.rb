@@ -29,7 +29,6 @@ RSpec.describe House, type: :model do
     it {should validate_presence_of :street}
     it {should validate_presence_of :bedrooms}
     it {should validate_presence_of :minimumstay}
-    it {should validate_presence_of :rules}
     it {should validate_presence_of :ammenities}
     it {should validate_presence_of :price}
     it {should belong_to :user}

@@ -29,15 +29,9 @@ class HousesController < ApplicationController
 
  # POST /houses
   def create
-    # scaffolded
-    # @region = Region.find(:id)
     @house = current_user.houses.new(house_params)
-    # @house.user = current_user
     if @house.save
-      # scaffolded
       redirect_to @house, notice: 'House was successfully created.'
-      # redirect_to discover
-      # redirect_to
     else
       render :new
     end
