@@ -21,7 +21,9 @@
         </div>
         <div class="row" >
           <div class="container-fluid">
+
           <div id="content">
+
           <% if notice %>
           <div id="notice_wrapper">
             <p class="notice"><%= notice %></p>
@@ -31,7 +33,11 @@
               <p class="alert"><%= alert %></p>
             </div>
           <% end %>
+
+          <div class="yield">
+
             <%= yield %>
+          </div>
           </div>
           </div>
 
