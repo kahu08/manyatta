@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:new, :create, :edit, :update, :destroy]
   before_filter :must_login?, only: [:new, :edit, :destroy]
-  # GET /bookings
+  before_action :authenticate_user!  # GET /bookings
   def index
     @bookings = Booking.all
   end
@@ -21,10 +21,6 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       redirect_to @house, notice: 'Booking was successfully created.'
-      respond_to do |format|
-        format.html {redirect_to @house}
-        format.js
-      end
     else
       render :new
     end
