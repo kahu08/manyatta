@@ -40,6 +40,6 @@ class House < ApplicationRecord
 
   # searching params
   def self.search(search)
-    where("name ILIKE ? OR location ILIKE ?", "%#{search}%", "%#{search}%")
+    where("name ILIKE ? OR location ILIKE ? OR street ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
 end
