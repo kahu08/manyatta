@@ -9,7 +9,7 @@
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDShorX3OZqv9yvXF1eDkCzPn4Lwx1b86w&callback=initMap">
+          src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLEMAP_API_KEY']%>&callback=initMap">
         </script>
     </head>
 
@@ -33,15 +33,9 @@
               <p class="alert"><%= alert %></p>
             </div>
           <% end %>
-
-          <div class="yield">
-
-            <%= yield %>
+              <%= yield %>
+            </div>       
           </div>
-          </div>
-          </div>
-
-
           </div>
         </div>
         <div class="row">

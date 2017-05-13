@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-12">
-    <div class="carousel slide" id="myCarousel">
-      <% if @house.images[0] %>
+    <div class="carousel slide" id="myCarousel" data-ride="carousel">
+      <% if @house.images %>
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <% @house.images.each do |image| %>
@@ -13,7 +13,7 @@
         <% if @house.images[0] %>
         <% @house.images.each do |image| %>
         <div class="item <%= 'active' if image == @house.images[0] %>">
-          <%= image_tag image.url %>
+          <img class="d-block img-fluid" <%= image_tag image.url %>
         </div>
         <% end %>
         <% end %>
