@@ -40,6 +40,8 @@ body {
 border: none;
 padding: 1% 6%;
 background: rgb(0,0,0);
+margin: 0;
+border-radius: 0;
 
 }
 
@@ -181,29 +183,23 @@ color: #FF690F ;
 font-family: sans-serif;
 }
 .navbar-inverse .navbar-nav li a{
+  
   color: #FFFFFF ;
   text-transform: capitalize;
   margin-right: 5px;
 }
 .navbar-inverse .navbar-nav li a:hover{
   color: #FF690F ;
-  border-top: 2px solid #ffffff ;
-  font-weight: bolder;
 }
-.navbar-inverse .navbar-nav li button{
-  background: #FF690F ;
-  text-transform: capitalize;
-
- border:1px solid  #FF690F ;
-  margin-right: 3%;
-  margin-left: 3%;
+.navbar-inverse .navbar-nav li  .signup{
+  margin-top: 5px;
+  border: 1px solid #FF690F;
+  padding: 10px 35px;
 }
 .main-content{
   margin-bottom: 5%
 }
-#content{
-  margin-top: 5%;
-}
+
 .dropdown-menu{
   background: black;
 }
