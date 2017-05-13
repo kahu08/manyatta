@@ -37,8 +37,11 @@ img.raty-cancel {
 }
 
 // carousel
+.item {
+  height: 400px;
+}
 img.d-block {
-  background-size: cover;
+  background-size: 100%;
   width: 100%;
 }
 // end carousel

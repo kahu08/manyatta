@@ -13,7 +13,7 @@
         <% if @house.images[0] %>
         <% @house.images.each do |image| %>
         <div class="item <%= 'active' if image == @house.images[0] %>">
-          <img class="d-block img-fluid" <%= image_tag image.url %>
+          <img class="d-block" <%= image_tag image.url %>
         </div>
         <% end %>
         <% end %>
