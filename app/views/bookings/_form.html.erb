@@ -11,22 +11,25 @@
     </div>
   <% end %>
 
- <div class="field">
-    <%= f.label :checkin %>
-    <%= f.date_select :checkin %>
+
+ <div class="field form-group">
+    <%= f.label :checkin%>
+      <br>
+    <%= f.date_select :checkin, class:"form-control" %>
   </div>
 
  <div class="field">
     <%= f.label :checkout %>
-    <%= f.date_select :checkout %>
+    <br>
+    <%= f.date_select :checkout, class:"form-control" %>
   </div>
 
  <div class="field">
     <%= f.label :occupancy %>
-    <%= f.number_field :occupancy %>
+    <%= f.number_field :occupancy, class:"form-control" %>
   </div>
 
- <div class="actions">
+ <div class="actions field-action">
     <%= f.submit "Book Now" %>
   </div>
 <% end %>
