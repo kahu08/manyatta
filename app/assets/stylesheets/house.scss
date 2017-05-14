@@ -154,3 +154,21 @@ padding-left: 13%;
   color: white;
   padding:0.5% 2%;
 }
+
+.field select{
+  background: #FF690F;
+  color: white;
+  border-color: #FF690F;
+  padding: 5px 10px;
+  font-size: 16px;
+
+}
+.field label{
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.field-action{
+ font-size: 25px;
+ margin-bottom: 5%;
+
+}
