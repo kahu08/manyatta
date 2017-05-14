@@ -35,6 +35,16 @@ img.raty-cancel {
   height: 500px;
   border: 2px solid #FF690F;
 }
+
+// carousel
+.item {
+  height: 460px;
+}
+img.d-block {
+  background-size: 100%;
+  width: 100%;
+}
+// end carousel
 .details{
   margin-top: 4%;
   border-top: 1px solid #FF690F;
@@ -143,4 +153,22 @@ padding-left: 13%;
   border: 1px solid  #FF690F;
   color: white;
   padding:0.5% 2%;
+}
+
+.field select{
+  background: #FF690F;
+  color: white;
+  border-color: #FF690F;
+  padding: 5px 10px;
+  font-size: 16px;
+
+}
+.field label{
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.field-action{
+ font-size: 25px;
+ margin-bottom: 5%;
+
 }
