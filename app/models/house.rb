@@ -19,6 +19,8 @@
 #
 
 class House < ApplicationRecord
+  geocoded_by :location
+  after_validation :geocode
   ratyrate_rateable "experience"
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
@@ -38,6 +40,6 @@ class House < ApplicationRecord
 
   # searching params
   def self.search(search)
-    where("name ILIKE ? OR location ILIKE ?", "%#{search}%", "%#{search}%")
+    where("name ILIKE ? OR location ILIKE ? OR street ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
 end

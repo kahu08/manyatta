@@ -21,16 +21,16 @@
 
   <!-- Tab panes code -->
   <div class="tab-content">
-    <div class="tab-pane fade in active" role="tabpanel" id="bookings">
+    <div class="tab-pane fade " role="tabpanel" id="bookings">
        <%= render("bookings")%>
     </div>
     <!-- show the house tab if the current user owns any houses -->
-    <div class="tab-pane fade in active" role="tabpanel" id="houses">
+    <div class="tab-pane fade " role="tabpanel" id="houses">
        <%= render("houses")%>
     </div>
    <!-- panel for settings -->
-    <div class="tab-pane fade" role="tabpanel" id="settings">
-      <%= link_to 'edit',  edit_user_registration_path, class:"btn btn-primary"%>
+    <div class="tab-pane fade in active edit-btn" role="tabpanel" id="settings">
+      <%= link_to 'edit profile',  edit_user_registration_path, class:"btn btn-primary"%>
     </div>
 
   </div>

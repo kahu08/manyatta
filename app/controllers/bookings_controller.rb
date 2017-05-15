@@ -1,18 +1,13 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:new, :create, :edit, :update, :destroy]
   before_filter :must_login?, only: [:new, :edit, :destroy]
-  # GET /bookings
+  before_action :authenticate_user!  # GET /bookings
   def index
     @bookings = Booking.all
   end
 
-  # GET /bookings/1
-  # def show
-  # end
-
   # GET /bookings/new
   def new
-    # @house = House.find(params[:house_id])
     @booking = @house.bookings.new
   end
 
@@ -22,11 +17,10 @@ class BookingsController < ApplicationController
 
   # POST /bookings
   def create
-    # @house = House.find(params[:house_id])
     @booking = @house.bookings.new(booking_params)
     @booking.user = current_user
     if @booking.save
-      redirect_to @house, notice: 'Booking was successfully created.'
+      redirect_to profile_index_path, notice: 'Booking was successfully created.'
     else
       render :new
     end
