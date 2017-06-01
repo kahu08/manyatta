@@ -32,6 +32,7 @@
     <%@houses.each do |house|%>
     <!-- link to show -->
     <%= link_to house_path(house), :action => 'go' do %>
+
      <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 img-thumbnail">
                <img class="img-responsive" <%= image_tag house.images[0].url%>
                 <h3><%= house.name%></h3>
@@ -40,13 +41,13 @@
         <span class="price">Ksh:<%= house.price%></span></h4>
 
             </div>
-            
-            
-            
+
+
+
             <%end%>
             <!-- end link -->
             <%end%>
         </div>
-   
+
 
 </div>
